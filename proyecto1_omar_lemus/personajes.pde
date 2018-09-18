@@ -1,0 +1,545 @@
+class personaje{
+int x1=90,y1=260;
+int xp,yp;
+float vida;
+float ataque;
+int eleccion;
+personaje(int xp1,int yp1,float ataque_){
+  xp=xp1;
+  yp=yp1;
+  ataque =ataque_;
+}
+void thecoon(){///////////////////////////////////////////////////////////////////////////////////////////////////////////THE COON
+
+    pushMatrix();
+    translate(50,0);
+    scale(0.5);
+  rectMode(CENTER);
+  ///////////////////capa1
+  stroke(217,217,217);
+  fill(116,116,116);
+  strokeWeight(6);
+  triangle(25,96,75,130,18,130);
+  triangle(150,93,100,130,157,130);
+   fill(255,0,0);
+   noStroke();
+  beginShape();
+  vertex(10,280);
+  vertex(165,280);
+  vertex(155,230);
+  vertex(18,230);
+  vertex(10,280);
+  /////////////////
+  endShape();
+  pushMatrix();
+  noStroke();
+  translate(x1+350,y1+90);
+    rotate(15);
+    //mano
+    fill(243,198,142);
+    rect(x1+59,y1,25,80,50);
+  //brazo
+   fill(78,78,78);
+    rect(x1+59,y1,25,60,50);
+    popMatrix();
+   noStroke();
+   //brazo2
+   pushMatrix();
+    translate(x1-220,y1+205);
+     rotate(-15);
+     //mano2
+    fill(243,198,142);
+    rect(x1-60,y1,25,80,50);
+     fill(78,78,78);
+    rect(x1-60,y1,25,60,50);   
+    popMatrix();
+      //cuerpo
+  fill(78,78,78);
+  rect(x1,y1,140,60,40);
+  ellipse(x1,y1+6,150,60);
+  fill(255);
+  rect(90,275,95,40,40);
+  rect(90,250,80,25,40);
+  rect(90,260,70,73,20);
+  //////capa
+  fill(255,0,0);
+  beginShape();
+  vertex(60,243);
+   bezierVertex(30,235,40,235,13,230);
+    vertex(23,220);
+     vertex(60,230);
+  endShape();
+  beginShape();
+  vertex(120,240);
+    bezierVertex(110,245,115,245,160,230);
+    vertex(155,220);
+    vertex(117,230);
+    vertex(120,240);
+  endShape();
+  
+  /////////////
+  fill(255,255,0);
+  ellipse(60,240,12,12);
+   ellipse(120,240,12,12);
+//cabeza
+  fill(243,198,142);
+  noStroke();
+  rect(x1,y1-90,165,130,60);
+  //cabello
+  fill(153,94,64);  
+  stroke(153,94,64);
+  beginShape();
+  vertex(110,106);
+ bezierVertex(118,100,90,120,170,150);
+  vertex(170,150);
+   bezierVertex(163,141,170,109,110,106);
+  endShape();
+  beginShape();
+  vertex(110,106);
+  bezierVertex(50,150,80,135,10,158);
+  vertex(10,158);
+  bezierVertex(10,100,80,98,110,106);
+  endShape();
+  //nariz
+  noStroke();
+fill(172,165,151);
+
+beginShape();
+vertex(75,184);
+vertex(90,170);
+vertex(105,184);
+vertex(115,205);
+bezierVertex(80,210,95,210,65,205);
+endShape();
+ellipse(90,200,80,15);
+noFill();
+ strokeWeight(1);
+stroke(5);
+curve(85,250,70,225,105,225,85,250);
+fill(0);
+ellipse(90,205,25,15);
+  //antifaz
+        beginShape();
+        fill(75,52,39);
+        stroke(0);
+         strokeWeight(0);
+        vertex(-7,150);
+        bezierVertex(50,173,85,140,82,180);
+        vertex(82,180);
+        bezierVertex(80,207,30,210,-18,170);
+        vertex(0,175);
+        vertex(-20,150);
+           vertex(3,165);
+           vertex(-7,150);
+        endShape();
+        ///////////////
+pushMatrix();
+translate(179,0);
+beginShape();
+fill(75,52,39);
+stroke(0);
+strokeWeight(0);
+vertex(7,150);
+bezierVertex(-50,173,-85,140,-82,180);
+vertex(-82,180);
+bezierVertex(-80,207,-30,210,18,170);
+vertex(0,175);
+vertex(20,150);
+vertex(3,165);
+vertex(7,150);
+endShape();
+popMatrix();
+//ojos
+ strokeWeight(0);
+ fill(255);
+ stroke(0);
+    ellipse(x1-25,y1-82,35,35);
+    ellipse(x1+25,y1-82,35,35);
+    //cejas
+    fill(20);
+    stroke(0);
+     strokeWeight(4);
+    beginShape();
+vertex(90,180);
+bezierVertex(119,150,143,165,155,165);
+vertex(155,165);
+bezierVertex(119,140,93,155,90,160);
+vertex(90,160);
+bezierVertex(87,155,61,140,25,165);
+vertex(25,165);
+bezierVertex(37,165,61,150,90,180);
+endShape();
+//////////////////////////////////cinturon
+fill(0);
+noStroke();
+rect(90,280,133,10,40);
+fill(255,255,0);
+rect(90,280,30,15);
+rect(40,280,5,15);
+rect(30,280,5,15);
+rect(130,280,5,15);
+  fill(0);
+  rect(90,297,115,10,40);
+  popMatrix();
+}
+void mysterion(){////////////////////////////////////////////////////////////////////////////////////////////////////////////////////MYSTERION
+pushMatrix();
+translate(200,0);
+scale(0.5);
+///////////////////capa
+ fill(58,51,82);
+noStroke();
+  beginShape();
+  vertex(10,280);
+  vertex(155,280);
+  vertex(145,230);
+  vertex(38,230);
+  vertex(28,280);
+  endShape();
+     ///////////////////////////brazos
+stroke(70);
+ fill(0,0,0);
+rect(50,257,27,45,40);
+rect(130,257,27,45,40);
+    fill(142,103,170);
+    noStroke();
+rect(50,240,27,45,40);
+rect(130,240,27,45,40);
+  ////////////////////////////cuerpo
+    fill(142,103,170);
+     noStroke();
+ strokeWeight(1);
+     rect(x1,y1,80,60,20);
+
+/////////////////////////cabeza
+ fill(58,51,82);
+  noStroke();
+  ellipse(90,120,80,50);
+  rect(x1,y1-90,165,130,60);
+    rect(x1,230,120,25,20);
+  fill(0);
+  rect(x1,y1-85,148,120,60);
+   
+  ////////////////////////////ojos
+   strokeWeight(0);
+ fill(255);
+    ellipse(x1-25,y1-82,35,35);
+    ellipse(x1+25,y1-82,35,35);
+    stroke(255);
+////////////////////////////////cara
+fill(245,204,175);
+beginShape();
+vertex(90,200);
+bezierVertex(119,215,143,215,160,200);
+vertex(160,200);
+bezierVertex(158,248,20,248,20,200);
+vertex(20,200);
+bezierVertex(47,215,61,215,90,200);
+endShape();
+noFill();
+ strokeWeight(1);
+stroke(0);
+curve(85,250,75,225,105,225,85,250);
+fill(0);
+triangle(90,180,140,160,100,130);
+triangle(90,180,80,130,50,160);
+stroke(100);
+noFill();
+ strokeWeight(0.5);
+ellipse(x1-25,y1-82,35,35);
+    ellipse(x1+25,y1-82,35,35);
+    fill(0);
+       rect(90,273,80,6,10);
+    rect(90,287,80,10,40);
+     fill(58,51,82);
+     noStroke();
+      ellipse(90,125,120,30);
+      pushMatrix();
+      scale(2,1);
+      fill(0,255,0);
+      textSize(27);
+      text("M",33,265);
+       textSize(45);
+      text("?",37,90);
+      popMatrix();
+      fill(177,177,177);
+     rect(90,100,10,5,10);
+        rect(90,95,10,5,10);
+         rect(90,273,20,6);
+         fill(200);
+          rect(90,278,80,3,10);
+             ellipse(90,280,20,3);      
+  popMatrix();
+}
+void mintberrycrunch(){ ///////////////////////////////////////////////////////////Mint-Berry Crunch
+  pushMatrix();
+   scale(0.5);
+translate(650,0);
+ noStroke();
+ fill(0);
+ rect(90,100,10,20,10);
+     ///////////////////////////brazos
+     
+ fill(249,195,135);
+rect(50,257,27,45,40);
+rect(130,257,27,45,40);
+    fill(195);
+    noStroke();
+rect(50,230,27,45,40);
+rect(130,230,27,45,40);
+  /////////////////////////////cuerpo
+  fill(195);
+ strokeWeight(1);
+     rect(x1,y1,80,60,20);
+         //////////////////////////////////hojas
+           stroke(0);
+           fill(209,118,149);
+    ellipse(100,255,25,25);
+     ellipse(120,255,25,25);
+      ellipse(110,265,25,25);
+    fill(55,148,68);
+    noStroke();
+    beginShape();
+    vertex(83,230);
+     bezierVertex(86,238,80,250,120,250);
+     vertex(120,250);
+        bezierVertex(115,238,115,250,110,230);
+         vertex(83,230);
+    endShape();
+    beginShape();
+    vertex(112,230);
+    vertex(140,230);
+    vertex(128,256);
+    vertex(112,230);
+    endShape();
+     beginShape();
+    vertex(150,230);
+     bezierVertex(153,238,150,250,160,250);
+     vertex(160,250);
+        bezierVertex(115,238,115,250,110,230);
+         vertex(83,230);
+    endShape();
+
+     ///////////////////////////////cabeza
+      fill(249,195,135);
+  stroke(249,195,135);
+  rect(x1,y1-90,165,130,60);
+  ////////////////////////////////
+  fill(204,115,145);
+   stroke(204,115,145);
+  rect(117,y1-90,110,130,60);
+     fill(249,195,135);
+     noStroke();
+  noStroke();
+   rect(70,y1-90,40,125);
+   ////////////////////////////////cabello
+   fill(239,184,50);
+
+   beginShape();
+   vertex(90,105);
+     bezierVertex(5,100,8,135,8,190);
+     vertex(25,145);
+      vertex(30,150);
+       vertex(35,145);
+       vertex(35,153);
+       vertex(55,153);
+       vertex(65,144);
+       vertex(70,153);
+        vertex(90,153);
+         vertex(90,105);
+   endShape();
+   //////////////////////////////////////
+   noStroke();
+     fill(204,115,145);
+      rect(99,y1-90,20,130);
+      rect(99,y1-89,20,130);
+  /////////////ojo
+     strokeWeight(0);
+ fill(0);
+    ellipse(x1-25,y1-82,35,35);
+    stroke(0);
+ 
+         rect(90,287,80,10,40);
+         fill(84,141,62);
+           rect(111,287,40,10,40);
+         popMatrix();
+       }
+void timtv(){/////////////////////////////////////////////////////////////////////////////////////////////////////TIM.VISIÓN
+pushMatrix();
+translate(450,0);
+scale(0.5);
+     ///////////////////////////brazos
+
+ fill(127);
+ ellipse(120,50,10,10);
+  ellipse(50,50,10,10);
+  stroke(127);
+  strokeWeight(1);
+  beginShape();
+  vertex(90,110);
+  vertex(120,50);
+  endShape();
+    beginShape();
+  vertex(90,110);
+  vertex(50,50);
+  endShape();
+       fill(0);
+ ellipse(90,110,50,30);
+ fill(249,195,135);
+rect(50,257,27,45,40);
+rect(130,257,27,45,40);
+    fill(24,59,70);
+    noStroke();
+rect(50,230,27,45,40);
+rect(130,230,27,45,40);
+  /////////////////////////////cuerpo
+  fill(24,59,70);
+ strokeWeight(1);
+     rect(x1,y1,80,60,20);
+/////////////////////////cabeza
+ fill(116,73,22);
+  noStroke();
+
+  rect(x1,y1-90,165,130,60);
+  fill(117,196,211);
+  rect(x1,y1-85,148,120,60);
+   
+  ////////////////////////////ojos
+   strokeWeight(0);
+ fill(177,219,232);
+    ellipse(x1-25,y1-82,35,35);
+    ellipse(x1+25,y1-82,35,35);
+    stroke(177,219,232);
+    noFill();
+     strokeWeight(3);
+      rect(x1,y1-86,140,110,60);
+    stroke(255);
+////////////////////////////////cara
+noFill();
+ strokeWeight(1);
+stroke(0);
+stroke(100);
+noFill();
+ strokeWeight(0.5);
+    fill(0);
+       rect(90,273,80,6,10);
+    rect(90,287,80,10,40);
+     fill(58,51,82);
+     noStroke();
+      fill(177,177,177);
+      rect(90,273,20,6);
+         fill(0);
+    ellipse(14,150,10,10);
+     ellipse(14,155,5,5);
+      ellipse(13,165,5,5);
+       ellipse(13,175,5,5);
+       fill(255,0,0);
+       textSize(10);
+       text("Tv",83,277);
+  popMatrix();
+}
+void thehumankite(){//////////////////////////////////////////////////////////////////////THE HUMAN KITE
+  pushMatrix();
+   scale(0.5);
+translate(1200,0);
+ ///////////////////////////////////////////////cometa
+ stroke(0);
+   fill(252,227,38);
+   triangle(70,50,200,150,90,180);
+    triangle(110,290,-30,170,90,180);
+   fill(199,16,21);
+   triangle(70,50,-30,170,90,180);
+      triangle(200,150,90,180,110,290);
+ noStroke();
+ 
+     ///////////////////////////brazos
+     
+ fill(254,220,182);
+rect(50,257,27,45,40);
+rect(130,257,27,45,40);
+    fill(74,185,194);
+    noStroke();
+triangle(60,233,20,233,65,260);
+triangle(x1+28,233,160,233,x1+28,255);
+//triangle(130,230,);
+  /////////////////////////////cuerpo
+  fill(74,185,194);
+ strokeWeight(1);
+     rect(x1,y1,80,60,20);
+     ///////////////////////////////cabeza
+    
+      fill(195,190,194);
+  rect(x1,y1-90,165,130,60);
+ fill(254,220,182);
+  beginShape();
+  vertex(x1,105);
+  vertex(23,y1-82);
+  vertex(50,233);
+    vertex(x1+38,234);
+    vertex(157,y1-82);
+      vertex(x1,105);
+
+  endShape();
+ 
+  /////////////ojos
+     strokeWeight(0);
+ fill(0);
+    ellipse(x1-25,y1-82,35,35);
+    stroke(0);
+ rect(90,287,80,10,40);
+   ellipse(x1+25,y1-82,35,35);
+   fill(156,167,171);
+     rect(90,273,80,6,10);
+   noFill();
+   strokeWeight(2);
+   curve(85,250,75,225,100,225,87,257);
+
+/////////////////////////////////////////////////cometa
+
+noStroke();
+fill(245,220,0);
+triangle(78,253,70,245,83,245);
+fill(93,180,101);
+triangle(78,253,70,245,71,260);
+fill(180,96,184);
+triangle(78,253,90,265,71,260);
+fill(222,28,63);
+triangle(78,253,90,265,83,245);
+ popMatrix();}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   void eleccion1(){
+  switch(eleccion){
+    case 1:{
+   thecoon();
+  }
+  break;
+  case 2:{
+    mysterion();
+  }
+  break;
+case 3 :{
+  mintberrycrunch();
+}
+break;
+case 4:{
+timtv();
+}
+break;
+case 5:{
+thehumankite();
+}
+break;
+}
+  }
+}
